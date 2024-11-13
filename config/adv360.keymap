@@ -26,6 +26,13 @@
             bindings = <&none &kp N3 &kp N0 &kp N9 &kp N9 &kp N5 &kp N2 &kp N9 &kp N6>;
             label = "ID";
         };
+
+        mouse_keys: mouse_keys {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_CONTROL &kp LEFT_CONTROL &kp LEFT_CONTROL &kp LEFT_CONTROL>;
+            label = "MOUSE_KEYS";
+        };
     };
 
     keymap {
@@ -44,7 +51,7 @@
         keypad {
             bindings = <
 &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5         &tog 1                &mo 3               &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T          &kp LEFT_BRACE        &kp RIGHT_BRACE     &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSLH
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T          &mouse_keys           &kp RIGHT_BRACE     &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G          &kp LEFT_PARENTHESIS  &kp K_CONTEXT_MENU  &kp DEL                          &kp HOME   &kp LCTRL  &kp RIGHT_PARENTHESIS  &kp H     &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B          &none                 &none               &kp LCTRL  &none      &none      &kp PG_UP  &none      &none                  &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
 &mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT  &kp BACKSPACE  &kp LALT              &kp LEFT_COMMAND    &kp PG_DN  &kp ENTER  &kp SPACE  &kp UP     &kp DOWN   &kp LBKT               &kp RBKT  &mo 2
